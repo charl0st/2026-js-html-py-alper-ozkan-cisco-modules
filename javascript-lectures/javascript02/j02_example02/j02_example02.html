@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Gate Simulator (AND, OR)</title>
+    <script src="j02_example02.js"></script>
+    <link rel="stylesheet" href="j02_example02.css">
+</head>
+<body>
+<div class="logic-gate">
+    <h1>Logic Gate Simulator</h1>
+    <div class="inputs">
+        <label for="input1">Input 1:</label>
+        <select id="input1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+        </select>
+        <label for="input2">Input 2:</label>
+        <select id="input2">
+            <option value="0">0</option>
+            <option value="1">1</option>
+        </select>
+    </div>
+    <div class="gate-selection">
+        <label for="gate">Select Gate:</label>
+        <select id="gate">
+            <option value="and">AND</option>
+            <option value="or">OR</option>
+        </select>
+    </div>
+    <div class="output">
+        <label for="output">Output:</label>
+        <span id="output"></span>
+    </div>
+    <button onclick="calculateOutput()">Calculate</button>
+</div>
+</body>
+</html>
+
+

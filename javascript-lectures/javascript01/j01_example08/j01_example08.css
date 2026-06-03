@@ -1,0 +1,17 @@
+#mySpan {
+    color: blue;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#myH2 {
+    color: brown;
+}
+
+.ourDivs {
+    color: magenta;
+}
+
+.errorDivs {
+    color: red;
+}

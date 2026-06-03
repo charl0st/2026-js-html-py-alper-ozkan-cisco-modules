@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple Calculator</title>
+    <script src="j06_example01.js"></script>
+</head>
+<body>
+<h2>Simple Calculator</h2>
+<div>Enter numbers and select the operation below:</div>
+<input type="number" id="num1" placeholder="Enter first number">
+<input type="number" id="num2" placeholder="Enter second number">
+<br/>
+<select id="operation">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select>
+<br/>
+<button onclick="calculate()">Calculate</button>
+<div id="result"></div>
+</body>
+</html>

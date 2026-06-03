@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movable Square</title>
+    <link rel="stylesheet" href="j03_example02.css">
+</head>
+<body>
+<h1>Movable Square</h1>
+<div class="button-container">
+    <button id="btn-left" onclick="moveLeft()">Left</button>
+    <button id="btn-right" onclick="moveRight()">Right</button>
+    <button id="btn-up" onclick="moveUp()">Up</button>
+    <button id="btn-down" onclick="moveDown()">Down</button>
+</div>
+<div id="square"></div>
+</body>
+<script>
+    let currentLeft = window.innerWidth / 2 - 50; // Center initial position (half width)
+    let currentTop = window.innerHeight / 2 - 50; // Center initial position (half height)
+
+    function moveLeft() {
+        currentLeft -= 20; // Move left by 20 pixels on click
+        if (currentLeft < 0) currentLeft = 0; // Prevent going off-screen
+        document.getElementById("square").style.left = currentLeft + "px";
+    }
+
+    function moveRight() {
+        currentLeft += 20; // Move right by 20 pixels on click
+        const squareWidth = document.getElementById("square").clientWidth;
+        if (currentLeft + squareWidth > window.innerWidth) {
+            currentLeft = window.innerWidth - squareWidth; // Prevent going off-screen
+        }
+        document.getElementById("square").style.left = currentLeft + "px";
+    }
+
+    function moveUp() {
+        currentTop -= 20; // Move up by 20 pixels on click
+        if (currentTop < 0) currentTop = 0; // Prevent going off-screen
+        document.getElementById("square").style.top = currentTop + "px";
+    }
+
+    function moveDown() {
+        currentTop += 20; // Move down by 20 pixels on click
+        const squareHeight = document.getElementById("square").clientHeight;
+        if (currentTop + squareHeight > window.innerHeight) {
+            currentTop = window.innerHeight - squareHeight; // Prevent going off-screen
+        }
+        document.getElementById("square").style.top = currentTop + "px";
+    }
+</script>
+</html>

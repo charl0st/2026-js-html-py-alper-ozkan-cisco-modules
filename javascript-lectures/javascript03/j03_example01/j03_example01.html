@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <script src="j03_example01.js"></script>
+    <link rel="stylesheet" href="j03_example01.css">
+</head>
+<body>
+<h1>To-Do List</h1>
+<span id="todo-count">0</span> Tasks
+<input type="text" id="new-todo" placeholder="Add a new task">
+<button id="add-btn" onclick="addTodo()">Add</button>
+<ul id="todo-list"></ul>
+<script>
+    let todos = [];
+    const todoCountSpan = document.getElementById("todo-count");
+    const todoList = document.getElementById("todo-list");
+    const newTodoInput = document.getElementById("new-todo");
+</script>
+</body>
+</html>
