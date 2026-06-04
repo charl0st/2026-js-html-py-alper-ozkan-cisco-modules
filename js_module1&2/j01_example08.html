@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My title</title>
+    <script src="j01_example08.js"></script>
+    <link rel="stylesheet" href="j01_example08.css">
+</head>
+<body>
+<h2 id="myH2">My first page</h2>
+myDiv:
+<div id="myDiv" class="ourDivs">Empty</div>
+<br/>
+<button onclick="changeText()">Change Text</button>
+<br/>
+<br/>
+
+<label for="myName">My name</label>
+<input type="text" id="myName" name="myName"></input>
+<button onclick="getNameAndWriteIntoDiv()">Get name and write into div</button>
+<br/><br/>
+myNameDiv: <div id="myNameDiv" class="ourDivs">Empty name</div>
+
+<br/><br/>
+<div id="myAgeErrorDiv" class="errorDivs"></div>
+<label for="myAge">My age</label>
+<input type="text" id="myAge" name="myAge" onchange="validateAge()"></input>
+<button onclick="getAgeAndWriteIntoDiv()">Get name and write into div</button>
+<br/><br/>
+myAgeDiv: <div id="myAgeDiv" class="ourDivs">Empty age</div>
+
+</body>
+</html>

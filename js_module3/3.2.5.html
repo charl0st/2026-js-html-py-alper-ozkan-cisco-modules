@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>3.2.5 JS1 LAB</title>
+</head>
+<body>
+
+<h1>ADD ONLY ONE PERSON TO OBJ STRUCTURE:</h1>
+
+<div id="mycontent" style="color: green;">Empty</div>
+<button onclick="addContact()">Add contact</button>
+
+<script>
+    let contacts = [{
+        name: "Maxwell Wright",
+        phone: "(0191) 719 6495",
+        email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+    }, {
+        name: "Raja Villarreal",
+        phone: "0866 398 2895",
+        email: "posuere.vulputate@sed.com"
+    }, {
+        name: "Helen Richards",
+        phone: "0800 1111",
+        email: "libero@convallis.edu"
+    }];
+
+    function addContact() {
+        let nm = prompt(`Enter a name:`)
+        let ph = prompt('Enter a phone number, please start 0:')
+        let eml = prompt('Enter a email address:')
+
+        let data = {
+            name: nm,
+            phone: ph,
+            email: eml
+        };
+
+        contacts.push(data);
+
+        let mycontent = document.getElementById("mycontent");
+        mycontent.textContent = "";
+        mycontent.style = "color: red";
+        for (let index = 0; index < contacts.length; index++) {
+            console.log(`${contacts[index].name} / ${contacts[index].phone} / ${contacts[index].email}`);
+            mycontent.textContent += `${contacts[index].name} / ${contacts[index].phone} / ${contacts[index].email}`;
+        }
+    }
+
+</script>
+
+</body>
+</html>
